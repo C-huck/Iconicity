@@ -44,8 +44,8 @@ def sem_score(df):
     return scores
 
 ##read in AMT data
-dat = pd.read_csv("scrubbed-data.csv",usecols=["Input.field_1","Answer.summary"])
-dat['EntryID'] = [x[:-4].lower() for x in dat['Input.field_1']]
+dat = pd.read_csv("scrubbed-data.csv",usecols=["EntryID","Guess"])
+dat['EntryID'],df['Guess'] = [x[:-4].lower() for x in dat['EntryID']], [x[:-4].lower() for x in dat['Guess']]
 
 ##read in ASL-LEX data
 df_LEX = pd.read_csv("iconicity-scores.csv",usecols=['EntryID','Icon'],header=0)
@@ -60,7 +60,7 @@ df = pd.merge(df,df_scores,on="EntryID")
 from scipy.stats import pearsonr, spearmanr    
 
 print(pearsonr(df['inter score'],df['Icon']))    
-print(spearmanr(df['inter score'],df['Icon']))    
+#print(spearmanr(df['inter score'],df['Icon']))    
 
 ##Visualize data
 import matplotlib.pyplot as plt    
