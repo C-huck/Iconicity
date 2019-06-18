@@ -48,7 +48,7 @@ dat = pd.read_csv("scrubbed-data.csv",usecols=["Input.field_1","Answer.summary"]
 dat['EntryID'] = [x[:-4].lower() for x in dat['Input.field_1']]
 
 ##read in ASL-LEX data
-df_LEX = pd.read_csv(k,usecols=['EntryID','Icon'],header=0)
+df_LEX = pd.read_csv("iconicity-scores.csv",usecols=['EntryID','Icon'],header=0)
 
 ##Get similarity scores
 df_scores = pd.DataFrame(data=sem_score(dat),columns=['EntryID','intra score','inter score'])   
