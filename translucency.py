@@ -1,6 +1,5 @@
 import pandas as pd
-import numpy as np
-from scipy import stats
+from scipy.stats import pearsonr#, spearmanr
 from nltk.corpus import wordnet as wn
 from nltk.stem import WordNetLemmatizer 
 from itertools import combinations
@@ -36,7 +35,6 @@ def sem_score(df):
             break
     if gt_synset:
         for wls in word_list_synsets:
-            print(wls,gt_synset)
             gt_scores.append(gt_synset.path_similarity(plo))
     else:
         gt_scores = 0
