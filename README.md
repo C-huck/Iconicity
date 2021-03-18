@@ -1,8 +1,7 @@
 # Translucency vs. Transparency
 This project investigates whether transparency scores correlate with translucency scores. Many signs in American Sign Language (ASL) are said to be iconic with respect to their lexical meaning. The sign CAT, for instance, is signed by tracing the outline of whiskers. Non-signers will agree that the sign CAT looks like its meaning when presented with its equivalent English word, but are less likely to accurately name the sign without the translation (Klima & Bellugi, 1979). A sign is said to be translucent if non-signers agree that it looks like what it means with the translation. A sign is said to be transparent if non-signers can accurately name the sign without translation.
 
-![Transluceny experimental design](https://github.com/C-huck/C-huck.github.io/raw/master/images/cat-translucent.PNG) ![Transparency experimental design](https://github.com/C-huck/C-huck.github.io/raw/master/images/cat-transparent.PNG)
-
+<img src="https://github.com/C-huck/C-huck.github.io/raw/master/images/cat-translucent.png" width="495" height="auto"> <img src="https://github.com/C-huck/C-huck.github.io/raw/master/images/cat-transparent.png" width="495" height="auto">
 
 
 We replicate this finding by asking non-signers to label verbs that vary with respect to their translucency (these measures were obtained from ASL-LEX.org), selecting 15 verbs that have low, medium, and high iconicity scores (5 at each level). However, instead of scoring '1' HIT and '0' MISS, we use a measure of the semantic similarity (obtained from wordnet). Preliminary results are dichotomous, with items with low and medium translucency scores having very low transparency scores, and items with high translucency scores having high transparency scores. 
